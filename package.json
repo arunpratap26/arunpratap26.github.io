@@ -30,9 +30,12 @@
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "5.7.2",
+        "axios": "^0.18.1",
         "bootstrap": "4.3.1",
-        "jquery": "3.3.1",
-        "jquery.easing": "^1.4.1"
+        "fstream": "^1.0.12",
+        "jquery": "^3.4.0",
+        "jquery.easing": "^1.4.1",
+        "tar": "^4.4.10"
     },
     "devDependencies": {
         "browser-sync": "2.26.3",
