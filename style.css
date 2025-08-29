@@ -1,0 +1,137 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: #f4f6f8;
+    margin: 0;
+    color: #222;
+}
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    padding: 32px;
+}
+header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+h2 {
+    color: #1976d2;
+    margin-top: 32px;
+    margin-bottom: 12px;
+}
+.summary {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+}
+.section {
+    margin-bottom: 28px;
+}
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+.exp-item {
+    margin-bottom: 24px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.exp-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.exp-header {
+    margin-bottom: 12px;
+}
+.exp-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1976d2;
+}
+.exp-company {
+    font-weight: 700;
+    color: #333;
+}
+.exp-period {
+    float: right;
+    color: #666;
+    font-size: 0.95rem;
+}
+.exp-desc {
+    color: #555;
+    line-height: 1.6;
+}
+.exp-desc ul {
+    margin-top: 8px;
+    padding-left: 20px;
+    list-style: disc;
+}
+.contact {
+    text-align: center;
+    margin-top: 32px;
+    font-size: 1.1rem;
+}
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.skill {
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 6px 14px;
+    border-radius: 16px;
+    font-size: 1rem;
+}
+.footer {
+    text-align: center;
+    margin-top: 40px;
+}
+.download-btn {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 28px;
+    background: #1976d2;
+    color: #fff;
+    border-radius: 24px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+    transition: background 0.2s;
+}
+.download-btn:hover {
+    background: #1565c0;
+}
+.profiles {
+    text-align: center;
+}
+.profile-links {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 16px;
+}
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s;
+}
+.profile-icon:hover {
+    transform: scale(1.15);
+}
+@media (max-width: 600px) {
+    .container {
+        padding: 12px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+}
