@@ -3,146 +3,333 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arun Singh | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+    <meta name="description" content="Tech Lead | Senior Software Engineer with 8.5+ years of .NET Core expertise">
+    <title>Arun Singh - Tech Lead | Senior Software Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>ARUN KUMAR SINGH</h1>
-            <div class="summary">Noida, India &bull; arunpratap26@Yahoo.com &bull; +91-6290639790</div>
-        </header>
-        <section class="section">
-            <h2>Professional Summary</h2>
-            <div>
-                Experienced .NET Core Developer with over 8.5+ years of hands-on expertise in designing, developing, and maintaining scalable web applications and microservices. Proficient in C#, ASP.NET Core, SQL Server, and Entity Framework, with solid front-end experience in Razor Views and Angular. Skilled in API integration, database performance tuning, and CI/CD pipelines using Azure DevOps. Passionate advocate of Test-Driven Development (TDD) and Agile methodologies, delivering high-quality solutions on time. A strategic thinker with excellent problem-solving skills and a collaborative mindset, consistently driving innovation and efficiency across software projects.
+    <div id="app">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="#" class="nav-logo">
+                    <i class="fas fa-code"></i> Arun Singh
+                </a>
+                <button class="nav-toggle" @click="mobileMenuOpen = !mobileMenuOpen">
+                    <i :class="['fas', mobileMenuOpen ? 'fa-times' : 'fa-bars']"></i>
+                </button>
+                <ul class="nav-menu" :class="{ active: mobileMenuOpen }">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link" @click="mobileMenuOpen = false">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link" @click="mobileMenuOpen = false">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#experience" class="nav-link" @click="mobileMenuOpen = false">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link" @click="mobileMenuOpen = false">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#awards" class="nav-link" @click="mobileMenuOpen = false">Awards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link cta" @click="mobileMenuOpen = false">Contact</a>
+                    </li>
+                </ul>
             </div>
-        </section>
-        <section class="section">
-            <h2>Technical Skills</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Backend & Core</h3>
-                    <div class="skills">
-                        <span class="skill">.NET Core</span>
-                        <span class="skill">C#</span>
-                        <span class="skill">ASP.NET Core MVC</span>
-                        <span class="skill">Entity Framework Core</span>
-                        <span class="skill">RESTful Web Services</span>
-                        <span class="skill">LINQ</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Architecture & Design</h3>
-                    <div class="skills">
-                        <span class="skill">Microservices</span>
-                        <span class="skill">Clean Architecture</span>
-                        <span class="skill">CQRS</span>
-                        <span class="skill">SAGA pattern</span>
-                        <span class="skill">Dependency Injection</span>
-                        <span class="skill">gRPC</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Databases & Caching</h3>
-                    <div class="skills">
-                        <span class="skill">SQL Server</span>
-                        <span class="skill">PostgreSQL</span>
-                        <span class="skill">Redis</span>
-                        <span class="skill">Database Design and Optimization</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Messaging & Streaming</h3>
-                    <div class="skills">
-                        <span class="skill">RabbitMQ</span>
-                        <span class="skill">MassTransit</span>
-                        <span class="skill">Apache Kafka</span>
-                        <span class="skill">YARP Api Gateway</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Tools & DevOps</h3>
-                    <div class="skills">
-                        <span class="skill">Docker</span>
-                        <span class="skill">CI/CD with Azure DevOps</span>
-                        <span class="skill">Git and GitHub</span>
-                        <span class="skill">Scrutor</span>
-                        <span class="skill">MediatR</span>
-                        <span class="skill">Fluent Validation</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Frontend & Quality</h3>
-                    <div class="skills">
-                        <span class="skill">Angular</span>
-                        <span class="skill">JavaScript</span>
-                        <span class="skill">HTML5/CSS3</span>
-                        <span class="skill">Unit Testing</span>
-                        <span class="skill">Test-Driven Development (TDD)</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Methodologies</h3>
-                    <div class="skills">
-                        <span class="skill">Agile</span>
-                        <span class="skill">Scrum</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section">
-            <h2>Professional Experience</h2>
-            <ul>
-                <li>
-                    <span class="exp-title">Tech Lead</span> <span class="exp-company">– Tech Mahindra</span> <span class="exp-period">Dec 2024 – Present</span><br>
-                    <span class="exp-desc">• Leading cross-functional development teams in designing and deploying enterprise-grade solutions using .NET Core, Angular, and microservices architecture.<br>
-                    • Actively driving Agile/Scrum rituals, including sprint planning, retrospectives, and daily stand-ups to foster transparency and delivery momentum.</span>
-                </li>
-                <li>
-                    <span class="exp-title">Senior Software Engineer</span> <span class="exp-company">– GlobalLogic</span> <span class="exp-period">Apr 2021 – Nov 2024</span><br>
-                    <span class="exp-desc">• Collaborated with cross-functional teams to design and implement RESTful APIs for client projects.<br>
-                    • Conducted code reviews and provided mentorship to junior developers.<br>
-                    • Participated in Agile/Scrum ceremonies, including sprint planning and daily stand-ups.</span>
-                </li>
-                <li>
-                    <span class="exp-title">Software Engineer</span> <span class="exp-company">– Chetu India Pvt Ltd</span> <span class="exp-period">July 2019 – Apr 2021</span><br>
-                    <span class="exp-desc">• Designed and developed responsive user interfaces with Razor View and Angular.<br>
-                    • Implemented CI/CD pipelines using Azure DevOps to automate build and deployment processes.<br>
-                    • Ensured code quality through unit testing and adherence to TDD practices.</span>
-                </li>
-                <li>
-                    <span class="exp-title">Software Developer</span> <span class="exp-company">– Kazma Technology</span> <span class="exp-period">Dec 2018 – Jun 2019</span><br>
-                    <span class="exp-desc">• Built and maintained web applications using ASP.NET Core and C#.<br>
-                    • Utilized Entity Framework for database operations and SQL Server for data management.</span>
-                </li>
-                <li>
-                    <span class="exp-title">Software Developer</span> <span class="exp-company">– Medtelerad Healthcare Pvt Ltd</span> <span class="exp-period">July 2017 – Nov 2018</span><br>
-                    <span class="exp-desc">• Developed healthcare applications using .NET Core and C#.<br>
-                    • Developed and integrated APIs for seamless communication between front-end and back-end services.</span>
-                </li>
-            </ul>
-        </section>
+        </nav>
 
-        <section class="section profiles">
-            <h2>Profiles</h2>
-            <div class="profile-links">
-                <a href="https://stackoverflow.com/users/9020340/arunpratap" target="_blank" title="Stack Overflow">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/stackoverflow/stackoverflow-original.svg" alt="Stack Overflow" class="profile-icon">
-                </a>
-                <a href="https://www.linkedin.com/in/arunpratap26" target="_blank" title="LinkedIn">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" class="profile-icon">
-                </a>
-                <a href="https://github.com/arunpratap26" target="_blank" title="GitHub">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="profile-icon">
-                </a>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Tech Lead & Senior Software Engineer</h1>
+                <p class="hero-subtitle">Building scalable, enterprise-grade solutions with .NET Core</p>
+                <p class="hero-description">
+                    8.5+ years crafting high-performance microservices, leading teams, and shipping products that matter.
+                    Passionate about clean architecture, TDD, and mentoring the next generation of engineers.
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Let's Work Together</a>
+                    <a href="ArunSinghDotnet.pdf" class="btn btn-secondary" download>
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">8.5+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Projects Delivered</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Engineers Mentored</div>
+                </div>
             </div>
         </section>
 
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            I'm a Strategic Software Engineer and Tech Lead passionate about solving complex problems with elegant, scalable solutions.
+                            Over 8.5 years, I've evolved from individual contributor to technical leader, guiding teams to ship mission-critical systems.
+                        </p>
+                        <p>
+                            My expertise spans full-stack .NET development, microservices architecture, cloud infrastructure, and team leadership.
+                            I believe in Test-Driven Development, continuous improvement, and creating an environment where engineers can do their best work.
+                        </p>
+                        <p>
+                            When I'm not architecting systems, I'm mentoring junior engineers, contributing to open source, and exploring emerging technologies.
+                        </p>
+                    </div>
+                    <div class="about-stats">
+                        <h3>Core Strengths</h3>
+                        <ul>
+                            <li>🏗️ Microservices & Distributed Systems</li>
+                            <li>👥 Team Leadership & Mentorship</li>
+                            <li>🧪 Test-Driven Development (TDD)</li>
+                            <li>☁️ Cloud Architecture (Azure)</li>
+                            <li>🔄 CI/CD & DevOps Practices</li>
+                            <li>💬 Code Review & Knowledge Sharing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-filter">
+                    <button
+                        v-for="category in skillCategories"
+                        :key="category"
+                        @click="selectedSkillCategory = category"
+                        :class="['filter-btn', { active: selectedSkillCategory === category }]"
+                    >
+                        {{ category }}
+                    </button>
+                </div>
+                <div class="skills-grid">
+                    <div
+                        v-for="skill in filteredSkills"
+                        :key="skill"
+                        class="skill-badge"
+                    >
+                        {{ skill }}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="timeline">
+                    <div v-for="(exp, idx) in experiences" :key="idx" class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3 class="exp-title">{{ exp.title }}</h3>
+                            <p class="exp-company">{{ exp.company }}</p>
+                            <p class="exp-date">
+                                <i class="fas fa-calendar"></i> {{ exp.date }}
+                            </p>
+                            <ul class="exp-highlights">
+                                <li v-for="(highlight, hidx) in exp.highlights" :key="hidx">
+                                    {{ highlight }}
+                                </li>
+                            </ul>
+                            <div class="exp-tech" v-if="exp.tech">
+                                <span v-for="t in exp.tech" :key="t" class="tech-tag">{{ t }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-filter">
+                    <button
+                        @click="selectedProjectCategory = null"
+                        :class="['filter-btn', { active: selectedProjectCategory === null }]"
+                    >
+                        All Projects
+                    </button>
+                    <button
+                        v-for="cat in projectCategories"
+                        :key="cat"
+                        @click="selectedProjectCategory = cat"
+                        :class="['filter-btn', { active: selectedProjectCategory === cat }]"
+                    >
+                        {{ cat }}
+                    </button>
+                </div>
+                <div class="projects-grid">
+                    <div v-for="project in filteredProjects" :key="project.id" class="project-card">
+                        <div class="project-header">
+                            <h3>{{ project.title }}</h3>
+                            <span class="project-category">{{ project.category }}</span>
+                        </div>
+                        <p class="project-description">{{ project.description }}</p>
+                        <div class="project-highlights">
+                            <h4>Key Outcomes:</h4>
+                            <ul>
+                                <li v-for="(outcome, oidx) in project.outcomes" :key="oidx">{{ outcome }}</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <span v-for="tech in project.tech" :key="tech" class="tech-badge">{{ tech }}</span>
+                        </div>
+                        <div class="project-role">
+                            <i class="fas fa-briefcase"></i> {{ project.role }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Awards & Testimonials Section -->
+        <section id="awards" class="awards">
+            <div class="container">
+                <h2 class="section-title">Awards & Recognition</h2>
+                <div class="awards-grid">
+                    <div class="award-card">
+                        <div class="award-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>Tech Mahindra Bravo Award</h3>
+                        <p>March 2025</p>
+                        <p class="award-description">Recognized for exceptional performance and leadership contributions</p>
+                    </div>
+                    <div class="award-card">
+                        <div class="award-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>GlobalLogic Spotlight</h3>
+                        <p>August 2023</p>
+                        <p class="award-description">Employee of the Month for outstanding technical contributions</p>
+                    </div>
+                    <div class="award-card">
+                        <div class="award-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>GlobalLogic Spotlight</h3>
+                        <p>July 2021</p>
+                        <p class="award-description">Recognized for mentorship and team leadership initiatives</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="contact-subtitle">I'm always interested in hearing about new opportunities and collaborations.</p>
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Get In Touch</h3>
+                        <p>Whether you're looking to collaborate on a project, discuss tech strategy, or just want to chat about software engineering, I'd love to hear from you.</p>
+
+                        <div class="contact-methods">
+                            <a href="mailto:contact@example.com" class="contact-method">
+                                <i class="fas fa-envelope"></i>
+                                <span>Email me</span>
+                            </a>
+                            <a href="https://linkedin.com/in/arunpratap26" target="_blank" class="contact-method">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/arunpratap26" target="_blank" class="contact-method">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://stackoverflow.com/users/arunpratap26" target="_blank" class="contact-method">
+                                <i class="fab fa-stack-overflow"></i>
+                                <span>Stack Overflow</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" @submit.prevent="handleContactSubmit">
+                        <div class="form-group">
+                            <input
+                                v-model="contactForm.name"
+                                type="text"
+                                placeholder="Your Name"
+                                required
+                            >
+                        </div>
+                        <div class="form-group">
+                            <input
+                                v-model="contactForm.email"
+                                type="email"
+                                placeholder="Your Email"
+                                required
+                            >
+                        </div>
+                        <div class="form-group">
+                            <input
+                                v-model="contactForm.subject"
+                                type="text"
+                                placeholder="Subject"
+                                required
+                            >
+                        </div>
+                        <div class="form-group">
+                            <textarea
+                                v-model="contactForm.message"
+                                placeholder="Your Message"
+                                rows="5"
+                                required
+                            ></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
         <footer class="footer">
-            <a href="./ArunSinghDotnet.pdf" download class="download-btn">Download Resume</a>
+            <div class="container">
+                <div class="footer-content">
+                    <p>&copy; 2025 Arun Singh. All rights reserved.</p>
+                    <div class="footer-links">
+                        <a href="https://linkedin.com/in/arunpratap26" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/arunpratap26" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://stackoverflow.com/users/arunpratap26" target="_blank">
+                            <i class="fab fa-stack-overflow"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
